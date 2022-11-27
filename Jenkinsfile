@@ -19,7 +19,7 @@ pipeline {
         stage('Clean Up') {
             steps {
                 sh '''
-                docker-system-prune
+                docker system prune --force
                 '''
             }
         }
