@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sh '''
                 docker system prune --force
-                ssh -i "~/.ssh/id_rsa" jenkins@34.88.190.72 << EOF
+                ssh -i "~/.ssh/id_rsa" jenkins@34.88.190.72 /bin/bash << "EOF"
                 docker system prune --force
                 '''
             }
