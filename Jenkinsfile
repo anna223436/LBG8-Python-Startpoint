@@ -12,7 +12,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                ssh -i "~/.ssh/id_rsa" jenkins@34.163.248.65 << EOF
+                ssh -i "~/.ssh/id_rsa" jenkins@34.88.190.72 << EOF
                 rm -rf LBG8-Python-Startpoint
                 git clone https://github.com/anna223436/LBG8-Python-Startpoint.git
                 cd LBG8-Python-Startpoint
@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sh '''
                 docker system prune --force
-                ssh -i "~/.ssh/id_rsa" jenkins@34.163.248.65 << EOF
+                ssh -i "~/.ssh/id_rsa" jenkins@34.88.190.72 << EOF
                 docker system prune --force
                 '''
             }
